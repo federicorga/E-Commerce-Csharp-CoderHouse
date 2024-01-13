@@ -1,0 +1,132 @@
+## Ignorar archivos temporales de Visual Studio, resultados de compilación y
+## archivos generados por complementos populares de Visual Studio.
+
+# Archivos específicos del usuario
+*.suo
+*.user
+*.sln.docstates
+
+# Resultados de compilación
+[Dd]ebug/
+[Rr]elease/
+x64/
+[Bb]in/
+[Oo]bj/
+
+# Resultados de pruebas MSTest
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+
+*_i.c
+*_p.c
+*_i.h
+*.ilk
+*.meta
+*.obj
+*.pch
+*.pdb
+*.pgc
+*.pgd
+*.rsp
+*.sbr
+*.tlb
+*.tli
+*.tlh
+*.tmp
+*.tmp_proj
+*.log
+*.vspscc
+*.vssscc
+.builds
+*.pidb
+*.log
+*.svclog
+*.scc
+
+# Archivos de caché de Visual C++
+ipch/
+*.aps
+*.ncb
+*.opensdf
+*.sdf
+*.cachefile
+
+# Perfilador de Visual Studio
+*.psess
+*.vsp
+*.vspx
+
+# Toolkit de automatización de guía
+*.gpState
+
+# ReSharper es un complemento de codificación para .NET
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+
+# Directorio de publicación Click-Once
+publish/
+
+# Salida de publicación web
+*.Publish.xml
+*.pubxml
+*.azurePubxml
+
+# Directorio de paquetes NuGet
+## TODO: Si tienes habilitada la restauración de paquetes NuGet, descomenta la siguiente línea
+packages/
+## TODO: Si la herramienta que usas requiere repositories.config, también descomenta la siguiente línea
+!packages/repositories.config
+
+# Salida de compilación de Windows Azure
+csx/
+*.build.csdef
+
+# Directorio del paquete de aplicaciones de Windows Store
+AppPackages/
+
+# Otros
+sql/
+*.Cache
+ClientBin/
+[Ss]tyle[Cc]op.*
+![Ss]tyle[Cc]op.targets
+~$*
+*~
+*.dbmdl
+*.[Pp]ublish.xml
+
+*.publishsettings
+
+# Proyectos RIA/Silverlight
+Generated_Code/
+
+# Archivos de copia de seguridad e informes de la conversión de un archivo de proyecto antiguo a una versión más reciente
+# de Visual Studio. Los archivos de copia de seguridad no son necesarios, ¡porque tenemos git ;-)
+_UpgradeReport_Files/
+Backup*/
+UpgradeLog*.XML
+UpgradeLog*.htm
+
+# Archivos de SQL Server
+App_Data/*.mdf
+App_Data/*.ldf
+
+# =========================
+# Detritus de Windows
+# =========================
+
+# Cachés de archivos de imágenes de Windows
+Thumbs.db
+ehthumbs.db
+
+# Archivo de configuración de carpeta
+Desktop.ini
+
+# Papelera de reciclaje utilizada en carpetas compartidas
+$RECYCLE.BIN/
+
+# Archivos de almacenamiento de servicios de escritorio de Mac
+.DS_Store
+
+_NCrunch*
