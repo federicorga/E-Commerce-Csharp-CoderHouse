@@ -12,3 +12,4 @@ D:\CRUSO IT PROGRAMACION\CODERHOUSE\C# BACK-END\Proyecto C# CoderHouse para entr
 D:\CRUSO IT PROGRAMACION\CODERHOUSE\C# BACK-END\Proyecto C# CoderHouse para entrega\ProyectoFinalCsharpFedericoGarea\ClasesConsola\obj\Debug\net6.0\AplicacionConsola.pdb
 D:\CRUSO IT PROGRAMACION\CODERHOUSE\C# BACK-END\Proyecto C# CoderHouse para entrega\ProyectoFinalCsharpFedericoGarea\ClasesConsola\obj\Debug\net6.0\AplicacionConsola.genruntimeconfig.cache
 D:\CRUSO IT PROGRAMACION\CODERHOUSE\C# BACK-END\Proyecto C# CoderHouse para entrega\ProyectoFinalCsharpFedericoGarea\ClasesConsola\obj\Debug\net6.0\ref\AplicacionConsola.dll
+D:\CRUSO IT PROGRAMACION\CODERHOUSE\C# BACK-END\Proyecto C# CoderHouse para entrega\ProyectoFinalCsharpFedericoGarea\ClasesConsola\obj\Debug\net6.0\AplicacionConsola.sourcelink.json

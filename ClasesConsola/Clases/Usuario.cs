@@ -29,7 +29,7 @@ namespace AplicacionConsola.Clases
         public int Id { get => id; set => id = value; }
         public string Name { get => name; set => name = value; }
         public string Apellido { get => apellido; set => apellido = value; }
-        public string NameUser1 { get => nameUser; set => nameUser = value; }
+        public string NameUser { get => nameUser; set => nameUser = value; }
         public int Password { get => password; set => password = value; }
         public string Email { get => email; set => email = value; }
 
