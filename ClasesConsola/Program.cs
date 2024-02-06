@@ -1,33 +1,88 @@
 ﻿
 
-using AplicacionConsola.Clases;
-
-Usuario usuario1 = new Usuario(12, "Fede", "Garea", "Altair", 1234,"federico.garea@gmail.com");
-
-Producto producto1 = new Producto(1, "Pera", "Es una pera", 21.15, 23.22, 5, usuario1.Id);
-
-Venta venta1 = new Venta(14, "Se vendio una Pera", usuario1.Id);
-
-ProductoVendido productoVendido1 = new ProductoVendido(1, producto1.Id, 2, venta1.Id);
-
-Console.WriteLine("USUARIO:");
-MostrarObjeto(usuario1);
-Console.WriteLine("\n");
-Console.WriteLine("PRODUCTO:");
-MostrarObjeto(producto1);
-Console.WriteLine("\n");
-Console.WriteLine("VENTA:");
-MostrarObjeto(venta1);
-Console.WriteLine("\n");
-Console.WriteLine("PRODUCTO VENDIDO:");
-MostrarObjeto(productoVendido1);
+using AplicacionConsola.Clases.Models;
+using AplicacionConsola.Database;
 
 
-void MostrarObjeto(object objeto)
+
+
+Usuario usuario = new Usuario("prueba", "prueba", "prueba", "ad21es", "prueba@gmail.com");
+
+
+try //OBTENER LISTA
 {
-    Type tipoObjeto = objeto.GetType();
-    foreach (var propiedad in tipoObjeto.GetProperties())
+
+
+    var listaUsuarios=GestorUsuarioData.GetListaUsuarios();
+
+    foreach (var item in listaUsuarios)
     {
-        Console.WriteLine($"{propiedad.Name}: {propiedad.GetValue(objeto)}");
+        Console.WriteLine(item.Name);
     }
+
+
+}catch (Exception ex){
+    
+    Console.WriteLine($"{ex.Message}");
+
+}
+
+
+try // OBTENER USUARIO POR ID
+{
+    Console.WriteLine(GestorUsuarioData.GetUsuarioPorId(1).Name);
+
+}catch (Exception ex){
+
+    Console.WriteLine($"{ex.Message}");
+
+}
+
+try  // AGREGAR USUARIO A LA TABLA SQL
+{
+
+   
+    GestorUsuarioData.AddUsuario(usuario);
+
+    var listaUsuarios = GestorUsuarioData.GetListaUsuarios();
+
+    foreach (var item in listaUsuarios)
+    {
+        Console.WriteLine(item.Name);
+    }
+
+}catch (Exception ex){
+
+    Console.WriteLine($"{ex.Message}");
+
+}
+
+try // MODIFICAR USUARIO DE LA TABLA SQL
+{
+
+    GestorUsuarioData.UpdateUsuario(4, usuario);
+
+    var listaUsuarios = GestorUsuarioData.GetListaUsuarios();
+
+    foreach (var item in listaUsuarios)
+    {
+        Console.WriteLine(item.Name);
+    }
+
+}catch (Exception ex){
+
+    Console.WriteLine($"{ex.Message}");
+
+}
+
+
+
+
+try //ELIMINAR USUARIO DE LA TABLA SQL
+{
+    GestorUsuarioData.DeleteUsuario(4);
+
+}catch (Exception ex){
+
+    Console.WriteLine($"{ex.Message}");
 }

@@ -13,3 +13,11 @@ D:\CRUSO IT PROGRAMACION\CODERHOUSE\C# BACK-END\Proyecto C# CoderHouse para entr
 D:\CRUSO IT PROGRAMACION\CODERHOUSE\C# BACK-END\Proyecto C# CoderHouse para entrega\ProyectoFinalCsharpFedericoGarea\ClasesConsola\obj\Debug\net6.0\AplicacionConsola.genruntimeconfig.cache
 D:\CRUSO IT PROGRAMACION\CODERHOUSE\C# BACK-END\Proyecto C# CoderHouse para entrega\ProyectoFinalCsharpFedericoGarea\ClasesConsola\obj\Debug\net6.0\ref\AplicacionConsola.dll
 D:\CRUSO IT PROGRAMACION\CODERHOUSE\C# BACK-END\Proyecto C# CoderHouse para entrega\ProyectoFinalCsharpFedericoGarea\ClasesConsola\obj\Debug\net6.0\AplicacionConsola.sourcelink.json
+D:\CRUSO IT PROGRAMACION\CODERHOUSE\C# BACK-END\Proyecto C# CoderHouse para entrega\ProyectoFinalCsharpFedericoGarea\ClasesConsola\obj\Debug\net6.0\AplicacionConsola.csproj.AssemblyReference.cache
+D:\CRUSO IT PROGRAMACION\CODERHOUSE\C# BACK-END\Proyecto C# CoderHouse para entrega\ProyectoFinalCsharpFedericoGarea\ClasesConsola\bin\Debug\net6.0\System.Data.SqlClient.dll
+D:\CRUSO IT PROGRAMACION\CODERHOUSE\C# BACK-END\Proyecto C# CoderHouse para entrega\ProyectoFinalCsharpFedericoGarea\ClasesConsola\bin\Debug\net6.0\runtimes\win-arm64\native\sni.dll
+D:\CRUSO IT PROGRAMACION\CODERHOUSE\C# BACK-END\Proyecto C# CoderHouse para entrega\ProyectoFinalCsharpFedericoGarea\ClasesConsola\bin\Debug\net6.0\runtimes\win-x64\native\sni.dll
+D:\CRUSO IT PROGRAMACION\CODERHOUSE\C# BACK-END\Proyecto C# CoderHouse para entrega\ProyectoFinalCsharpFedericoGarea\ClasesConsola\bin\Debug\net6.0\runtimes\win-x86\native\sni.dll
+D:\CRUSO IT PROGRAMACION\CODERHOUSE\C# BACK-END\Proyecto C# CoderHouse para entrega\ProyectoFinalCsharpFedericoGarea\ClasesConsola\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\CRUSO IT PROGRAMACION\CODERHOUSE\C# BACK-END\Proyecto C# CoderHouse para entrega\ProyectoFinalCsharpFedericoGarea\ClasesConsola\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\CRUSO IT PROGRAMACION\CODERHOUSE\C# BACK-END\Proyecto C# CoderHouse para entrega\ProyectoFinalCsharpFedericoGarea\ClasesConsola\obj\Debug\net6.0\AplicacionConsola.csproj.CopyComplete
