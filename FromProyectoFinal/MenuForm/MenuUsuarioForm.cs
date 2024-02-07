@@ -3,9 +3,11 @@ using AplicacionConsola.Database;
 
 namespace FromProyectoFinal
 {
-    public partial class MenuUsuarioForm : Form
+    public partial class btnEdit : Form
     {
-        public MenuUsuarioForm()
+
+        public int idUsuario { get; private set; }
+        public btnEdit()
         {
             InitializeComponent();
         }
@@ -104,7 +106,11 @@ namespace FromProyectoFinal
 
                 if (resultado)
                 {
-                    MessageBox.Show($"El Usuario con id:{id} fue eliminado!");
+                    MessageBox.Show($"El Usuario con id: {id} fue eliminado!");
+                }
+                else
+                {
+                    MessageBox.Show($"Usuario con id: {id} no encontrado!");
                 }
             }
             catch (Exception ex)
@@ -116,45 +122,47 @@ namespace FromProyectoFinal
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
+
             try
             {
 
-                string idstring = this.txtId.Text;
-
-                int id = int.Parse(idstring);
-
-
-                UsuarioForm modificarUsuarioForm = new UsuarioForm();
-
-                modificarUsuarioForm.ShowDialog();
-
-
-                if (modificarUsuarioForm.UsuarioModificado != null)
+                if (this.txtId.Text != "")
                 {
 
-                    Usuario usuarioEdit = modificarUsuarioForm.UsuarioModificado;
+                    string idstring = this.txtId.Text;
 
+                    idUsuario = int.Parse(idstring);
 
-                    if (GestorUsuarioData.UpdateUsuario(id, usuarioEdit))
+                    if (GestorUsuarioData.GetUsuarioPorId(idUsuario) is not null)
                     {
-                        MessageBox.Show("Se Modifico el usuario en  la Base de datos");
+                       
+
+                        UsuarioForm modificarUsuarioForm = new UsuarioForm(idUsuario);
+
+                        modificarUsuarioForm.ModoEdicion = true;
+
+                        modificarUsuarioForm.ShowDialog();
                     }
                 }
                 else
                 {
-                    MessageBox.Show("No se pudo Modificar el Usuario");
+                    MessageBox.Show("Ingrese un id Valido");
                 }
+
+
+
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
 
                 MessageBox.Show(ex.Message);
 
             }
 
-        }
-        
 
+        }
+
+      
     }
 }
 

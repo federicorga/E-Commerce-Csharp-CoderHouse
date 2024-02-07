@@ -14,12 +14,24 @@ namespace FromProyectoFinal
     {
         public MenuPrincipalForm()
         {
+
+
             InitializeComponent();
+        }
+
+
+        private void MenuPrincipalForm_Load_1(object sender, EventArgs e)
+        {
+
+            btnMProducto.Enabled = false;
+            btnMProductoVendido.Enabled = false;
+            btnMProducto.Enabled = false;
+            btnMVenta.Enabled = false;
         }
 
         private void btnMUsuario_Click(object sender, EventArgs e)
         {
-            MenuUsuarioForm menuUsuarioForm = new MenuUsuarioForm();
+            btnEdit menuUsuarioForm = new btnEdit();
 
             menuUsuarioForm.Show();
         }
@@ -42,5 +54,7 @@ namespace FromProyectoFinal
 
             menuVentaForm.Show();
         }
+
+       
     }
 }

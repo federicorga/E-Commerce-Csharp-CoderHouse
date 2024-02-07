@@ -28,6 +28,6 @@ D:\CRUSO IT PROGRAMACION\CODERHOUSE\C# BACK-END\Proyecto C# CoderHouse para entr
 D:\CRUSO IT PROGRAMACION\CODERHOUSE\C# BACK-END\Proyecto C# CoderHouse para entrega\ProyectoFinalCsharpFedericoGarea\FromProyectoFinal\obj\Debug\net6.0-windows\FromProyectoFinal.FormsGestores.VentaForm.resources
 D:\CRUSO IT PROGRAMACION\CODERHOUSE\C# BACK-END\Proyecto C# CoderHouse para entrega\ProyectoFinalCsharpFedericoGarea\FromProyectoFinal\obj\Debug\net6.0-windows\FromProyectoFinal.MenuProductoForm.resources
 D:\CRUSO IT PROGRAMACION\CODERHOUSE\C# BACK-END\Proyecto C# CoderHouse para entrega\ProyectoFinalCsharpFedericoGarea\FromProyectoFinal\obj\Debug\net6.0-windows\FromProyectoFinal.MenuProductoVendidoForm.resources
-D:\CRUSO IT PROGRAMACION\CODERHOUSE\C# BACK-END\Proyecto C# CoderHouse para entrega\ProyectoFinalCsharpFedericoGarea\FromProyectoFinal\obj\Debug\net6.0-windows\FromProyectoFinal.MenuUsuarioForm.resources
 D:\CRUSO IT PROGRAMACION\CODERHOUSE\C# BACK-END\Proyecto C# CoderHouse para entrega\ProyectoFinalCsharpFedericoGarea\FromProyectoFinal\obj\Debug\net6.0-windows\FromProyectoFinal.MenuVentaForm.resources
 D:\CRUSO IT PROGRAMACION\CODERHOUSE\C# BACK-END\Proyecto C# CoderHouse para entrega\ProyectoFinalCsharpFedericoGarea\FromProyectoFinal\obj\Debug\net6.0-windows\FromProyectoFinal.MenuPrincipalForm.resources
+D:\CRUSO IT PROGRAMACION\CODERHOUSE\C# BACK-END\Proyecto C# CoderHouse para entrega\ProyectoFinalCsharpFedericoGarea\FromProyectoFinal\obj\Debug\net6.0-windows\FromProyectoFinal.btnEdit.resources

@@ -96,6 +96,7 @@
             Controls.Add(btnMUsuario);
             Name = "MenuPrincipalForm";
             Text = "MenuPrincipalForm";
+            Load += MenuPrincipalForm_Load_1;
             ResumeLayout(false);
             PerformLayout();
         }

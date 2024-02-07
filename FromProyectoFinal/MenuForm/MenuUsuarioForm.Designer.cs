@@ -1,6 +1,6 @@
 ﻿namespace FromProyectoFinal
 {
-    partial class MenuUsuarioForm
+    partial class btnEdit
     {
         /// <summary>
         ///  Required designer variable.
@@ -30,12 +30,12 @@
         {
             btnVolver = new Button();
             btnEliminar = new Button();
-            btnEditar = new Button();
             btnAgregar = new Button();
             txtId = new TextBox();
             btnBuscarId = new Button();
             btnCargarDatos = new Button();
             dgLista = new DataGridView();
+            btnEditar = new Button();
             ((System.ComponentModel.ISupportInitialize)dgLista).BeginInit();
             SuspendLayout();
             // 
@@ -58,16 +58,6 @@
             btnEliminar.Text = "Eliminar";
             btnEliminar.UseVisualStyleBackColor = true;
             btnEliminar.Click += btnEliminar_Click;
-            // 
-            // btnEditar
-            // 
-            btnEditar.Location = new Point(26, 262);
-            btnEditar.Name = "btnEditar";
-            btnEditar.Size = new Size(94, 29);
-            btnEditar.TabIndex = 20;
-            btnEditar.Text = "Editar";
-            btnEditar.UseVisualStyleBackColor = true;
-            btnEditar.Click += btnEditar_Click;
             // 
             // btnAgregar
             // 
@@ -116,20 +106,30 @@
             dgLista.Size = new Size(516, 426);
             dgLista.TabIndex = 15;
             // 
-            // MenuUsuarioForm
+            // btnEditar
+            // 
+            btnEditar.Location = new Point(26, 246);
+            btnEditar.Name = "btnEditar";
+            btnEditar.Size = new Size(94, 29);
+            btnEditar.TabIndex = 23;
+            btnEditar.Text = "Editar";
+            btnEditar.UseVisualStyleBackColor = true;
+            btnEditar.Click += btnEditar_Click;
+            // 
+            // btnEdit
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(btnEditar);
             Controls.Add(btnVolver);
             Controls.Add(btnEliminar);
-            Controls.Add(btnEditar);
             Controls.Add(btnAgregar);
             Controls.Add(txtId);
             Controls.Add(btnBuscarId);
             Controls.Add(btnCargarDatos);
             Controls.Add(dgLista);
-            Name = "MenuUsuarioForm";
+            Name = "btnEdit";
             Text = "Menu Usuario";
             ((System.ComponentModel.ISupportInitialize)dgLista).EndInit();
             ResumeLayout(false);
@@ -140,11 +140,11 @@
 
         private Button btnVolver;
         private Button btnEliminar;
-        private Button btnEditar;
         private Button btnAgregar;
         private TextBox txtId;
         private Button btnBuscarId;
         private Button btnCargarDatos;
         private DataGridView dgLista;
+        private Button btnEditar;
     }
 }

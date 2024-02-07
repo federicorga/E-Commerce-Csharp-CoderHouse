@@ -14,18 +14,34 @@ namespace FromProyectoFinal
 {
     public partial class UsuarioForm : Form
     {
-
+        private int idUsuario;
         public UsuarioForm()
         {
 
             InitializeComponent();
 
         }
-        public Usuario UsuarioCreado { get; private set; }
 
-        public Usuario UsuarioModificado { get; private set; }
+        public UsuarioForm (int idUsuario) 
+        {
+           
+            this.idUsuario = idUsuario;
+
+            InitializeComponent();
+        }
+        public Usuario UsuarioCreado { get; private set; }
+        public bool ModoEdicion { get; set; } = false;
+
         private void agregarUsuarioForm_Load(object sender, EventArgs e)
         {
+            if (ModoEdicion)
+            {
+                btnAgregarUsuario.Enabled = false;
+            }
+            else
+            {
+                btnModificar.Enabled = false;
+            }
 
         }
 
@@ -33,13 +49,21 @@ namespace FromProyectoFinal
 
         private void btnAgregarUsuario_Click(object sender, EventArgs e)
         {
-            Usuario usuario = new Usuario(this.txtNombre.Text,
-                this.txtApellido.Text,
-                this.txtNombreUsuario.Text,
-                this.txtContraseña.Text,
-                this.txtMail.Text);
 
-            this.UsuarioCreado = usuario;
+
+            string nombre=this.txtNombre.Text;
+            string apellido=this.txtApellido.Text;
+            string nombreUsuario=this.txtNombreUsuario.Text;
+            string contraseña=this.txtContraseña.Text;
+            string email= this.txtMail.Text;
+
+            if (nombre != "" && apellido != "" && nombreUsuario != "" && contraseña != "" && email != "")
+            {
+
+                Usuario usuario = new Usuario(nombre, apellido, nombreUsuario, contraseña, email);
+
+                this.UsuarioCreado = usuario;
+            }
 
             this.Close();
 
@@ -52,15 +76,42 @@ namespace FromProyectoFinal
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            Usuario usuario = new Usuario(this.txtNombre.Text,
-                        this.txtApellido.Text,
-                        this.txtNombreUsuario.Text,
-                        this.txtContraseña.Text,
-                        this.txtMail.Text);
 
-            this.UsuarioModificado = usuario;
+            try
+            {
+                string nombre = this.txtNombre.Text;
+                string apellido = this.txtApellido.Text;
+                string nombreUsuario = this.txtNombreUsuario.Text;
+                string contraseña = this.txtContraseña.Text;
+                string email = this.txtMail.Text;
 
-            this.Close();
+                if (nombre != "" && apellido != "" && nombreUsuario != "" && contraseña != "" && email != "")
+                {
+
+                    int id = idUsuario;
+
+                    Usuario usuario = new Usuario(nombre, apellido, nombreUsuario, contraseña, email);
+
+                    if (GestorUsuarioData.UpdateUsuario(id, usuario))
+                    {
+
+                        MessageBox.Show("Usuario agregado de forma exitosa!");
+
+                        this.Close();
+                    }
+
+
+                }
+                else
+                {
+                    MessageBox.Show("Campos vacios, vuelva a intenralo");
+                }
+
+            }catch (Exception ex) {
+                MessageBox.Show(ex.Message);
+            }
+
+            
 
         }
     }
