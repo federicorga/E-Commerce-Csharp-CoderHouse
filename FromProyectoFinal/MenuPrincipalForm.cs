@@ -23,7 +23,7 @@ namespace FromProyectoFinal
         private void MenuPrincipalForm_Load_1(object sender, EventArgs e)
         {
 
-            btnMProducto.Enabled = false;
+
             btnMProductoVendido.Enabled = false;
             btnMProducto.Enabled = false;
             btnMVenta.Enabled = false;

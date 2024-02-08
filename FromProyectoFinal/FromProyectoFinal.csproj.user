@@ -16,10 +16,10 @@
     <Compile Update="MenuForm\MenuProductoVendidoForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="MenuForm\MenuUsuarioForm.cs">
+    <Compile Update="FormsGestores\VentaForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="FormsGestores\VentaForm.cs">
+    <Compile Update="MenuForm\MenuUsuarioForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="MenuForm\MenuVentaForm.cs">

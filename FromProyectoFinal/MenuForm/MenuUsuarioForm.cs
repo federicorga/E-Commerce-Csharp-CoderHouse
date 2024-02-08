@@ -76,9 +76,12 @@ namespace FromProyectoFinal
 
                 agregarUsuarioForm.ShowDialog();
 
+
+
                 if (agregarUsuarioForm.UsuarioCreado != null)
                 {
                     Usuario usuario = agregarUsuarioForm.UsuarioCreado;
+
 
                     if (GestorUsuarioData.AddUsuario(usuario))
                     {
@@ -148,9 +151,6 @@ namespace FromProyectoFinal
                 {
                     MessageBox.Show("Ingrese un id Valido");
                 }
-
-
-
             }
             catch (Exception ex)
             {

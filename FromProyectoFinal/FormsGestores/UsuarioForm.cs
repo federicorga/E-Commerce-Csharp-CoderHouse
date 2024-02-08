@@ -15,6 +15,9 @@ namespace FromProyectoFinal
     public partial class UsuarioForm : Form
     {
         private int idUsuario;
+
+        public Usuario UsuarioCreado { get; private set; }
+        public bool ModoEdicion { get; set; } = false;
         public UsuarioForm()
         {
 
@@ -28,10 +31,9 @@ namespace FromProyectoFinal
             this.idUsuario = idUsuario;
 
             InitializeComponent();
+         
         }
-        public Usuario UsuarioCreado { get; private set; }
-        public bool ModoEdicion { get; set; } = false;
-
+    
         private void agregarUsuarioForm_Load(object sender, EventArgs e)
         {
             if (ModoEdicion)
@@ -43,29 +45,53 @@ namespace FromProyectoFinal
                 btnModificar.Enabled = false;
             }
 
-        }
+            if (this.idUsuario != 0)
+            {
 
+                Usuario usuarioEncontrado = GestorUsuarioData.GetUsuarioPorId(this.idUsuario);
+
+                this.txtNombre.Text = usuarioEncontrado.Name;
+                this.txtApellido.Text = usuarioEncontrado.Apellido;
+                this.txtContraseña.Text = usuarioEncontrado.Password;
+                this.txtMail.Text = usuarioEncontrado.Email;
+                this.txtNombreUsuario.Text = usuarioEncontrado.NameUser;
+
+            }
+
+
+        }
 
 
         private void btnAgregarUsuario_Click(object sender, EventArgs e)
         {
 
-
-            string nombre=this.txtNombre.Text;
-            string apellido=this.txtApellido.Text;
-            string nombreUsuario=this.txtNombreUsuario.Text;
-            string contraseña=this.txtContraseña.Text;
-            string email= this.txtMail.Text;
-
-            if (nombre != "" && apellido != "" && nombreUsuario != "" && contraseña != "" && email != "")
+            try
             {
+                string nombre = this.txtNombre.Text;
+                string apellido = this.txtApellido.Text;
+                string nombreUsuario = this.txtNombreUsuario.Text;
+                string contraseña = this.txtContraseña.Text;
+                string email = this.txtMail.Text;
 
-                Usuario usuario = new Usuario(nombre, apellido, nombreUsuario, contraseña, email);
+                if (nombre != string.Empty && apellido != string.Empty && nombreUsuario != string.Empty && contraseña != string.Empty && email != string.Empty)
+                {
 
-                this.UsuarioCreado = usuario;
+                    Usuario usuario = new Usuario(nombre, apellido, nombreUsuario, contraseña, email);
+
+                    this.UsuarioCreado = usuario;
+
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Campos vacios, vuelva a intenralo");
+                }
+            }catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
 
-            this.Close();
+           
 
         }
 
@@ -79,6 +105,8 @@ namespace FromProyectoFinal
 
             try
             {
+
+        
                 string nombre = this.txtNombre.Text;
                 string apellido = this.txtApellido.Text;
                 string nombreUsuario = this.txtNombreUsuario.Text;
@@ -87,8 +115,8 @@ namespace FromProyectoFinal
 
                 if (nombre != "" && apellido != "" && nombreUsuario != "" && contraseña != "" && email != "")
                 {
-
                     int id = idUsuario;
+
 
                     Usuario usuario = new Usuario(nombre, apellido, nombreUsuario, contraseña, email);
 

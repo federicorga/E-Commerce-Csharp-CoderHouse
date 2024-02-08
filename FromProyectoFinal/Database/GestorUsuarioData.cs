@@ -118,10 +118,11 @@ namespace AplicacionConsola.Database
                 connection.Open();
                 return command.ExecuteNonQuery() > 0; //si es mayor a 0 es verdadero si es 0 es false primero se ejecuta la sentencia de ejeucion de datos.
 
-                throw new Exception($"{usuario.Name} no agregado a la lista");
+                
 
             }
 
+            throw new Exception($"Usuario no agregado a la lista");
 
         }
 
