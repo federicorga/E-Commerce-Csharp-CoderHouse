@@ -219,10 +219,7 @@ namespace FormEntityFramework.Forms.ABMProductos
             }
         }
 
-        private void dgvDatos_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+     
 
    
     }

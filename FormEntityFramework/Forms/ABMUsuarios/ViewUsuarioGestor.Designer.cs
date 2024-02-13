@@ -66,7 +66,7 @@
             btnModificar.Location = new Point(128, 395);
             btnModificar.Name = "btnModificar";
             btnModificar.Size = new Size(94, 29);
-            btnModificar.TabIndex = 2;
+            btnModificar.TabIndex = 7;
             btnModificar.Text = "Modificar";
             btnModificar.UseVisualStyleBackColor = true;
             btnModificar.Click += btnModificar_Click;
@@ -76,7 +76,7 @@
             btnAgregar.Location = new Point(12, 395);
             btnAgregar.Name = "btnAgregar";
             btnAgregar.Size = new Size(94, 29);
-            btnAgregar.TabIndex = 4;
+            btnAgregar.TabIndex = 6;
             btnAgregar.Text = "Agregar";
             btnAgregar.UseVisualStyleBackColor = true;
             btnAgregar.Click += btnAgregar_Click;
@@ -86,14 +86,14 @@
             txtNombre.Location = new Point(40, 62);
             txtNombre.Name = "txtNombre";
             txtNombre.Size = new Size(199, 27);
-            txtNombre.TabIndex = 6;
+            txtNombre.TabIndex = 1;
             // 
             // btnCancelar
             // 
             btnCancelar.Location = new Point(244, 395);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(94, 29);
-            btnCancelar.TabIndex = 7;
+            btnCancelar.TabIndex = 8;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = true;
             btnCancelar.Click += btnCancelar_Click;
@@ -103,21 +103,21 @@
             txtApellido.Location = new Point(40, 124);
             txtApellido.Name = "txtApellido";
             txtApellido.Size = new Size(199, 27);
-            txtApellido.TabIndex = 8;
+            txtApellido.TabIndex = 2;
             // 
             // txtPassword
             // 
             txtPassword.Location = new Point(40, 251);
             txtPassword.Name = "txtPassword";
             txtPassword.Size = new Size(199, 27);
-            txtPassword.TabIndex = 12;
+            txtPassword.TabIndex = 4;
             // 
             // txtNombreUsuario
             // 
             txtNombreUsuario.Location = new Point(40, 189);
             txtNombreUsuario.Name = "txtNombreUsuario";
             txtNombreUsuario.Size = new Size(199, 27);
-            txtNombreUsuario.TabIndex = 11;
+            txtNombreUsuario.TabIndex = 3;
             // 
             // label3
             // 
@@ -142,7 +142,7 @@
             txtEmail.Location = new Point(40, 312);
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new Size(199, 27);
-            txtEmail.TabIndex = 14;
+            txtEmail.TabIndex = 5;
             // 
             // label5
             // 

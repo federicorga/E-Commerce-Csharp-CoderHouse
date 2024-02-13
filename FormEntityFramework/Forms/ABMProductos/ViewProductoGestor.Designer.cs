@@ -48,7 +48,7 @@
             txtIdUsuario.Location = new Point(45, 309);
             txtIdUsuario.Name = "txtIdUsuario";
             txtIdUsuario.Size = new Size(199, 27);
-            txtIdUsuario.TabIndex = 40;
+            txtIdUsuario.TabIndex = 5;
             // 
             // label5
             // 
@@ -64,14 +64,14 @@
             txtStock.Location = new Point(45, 248);
             txtStock.Name = "txtStock";
             txtStock.Size = new Size(199, 27);
-            txtStock.TabIndex = 38;
+            txtStock.TabIndex = 4;
             // 
             // txtPrecioVenta
             // 
             txtPrecioVenta.Location = new Point(45, 186);
             txtPrecioVenta.Name = "txtPrecioVenta";
             txtPrecioVenta.Size = new Size(199, 27);
-            txtPrecioVenta.TabIndex = 37;
+            txtPrecioVenta.TabIndex = 3;
             // 
             // label3
             // 
@@ -96,14 +96,14 @@
             txtCosto.Location = new Point(45, 121);
             txtCosto.Name = "txtCosto";
             txtCosto.Size = new Size(199, 27);
-            txtCosto.TabIndex = 34;
+            txtCosto.TabIndex = 2;
             // 
             // btnCancelar
             // 
             btnCancelar.Location = new Point(249, 392);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(94, 29);
-            btnCancelar.TabIndex = 33;
+            btnCancelar.TabIndex = 8;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = true;
             btnCancelar.Click += btnCancelar_Click;
@@ -113,14 +113,14 @@
             txtDescripcion.Location = new Point(45, 59);
             txtDescripcion.Name = "txtDescripcion";
             txtDescripcion.Size = new Size(199, 27);
-            txtDescripcion.TabIndex = 32;
+            txtDescripcion.TabIndex = 1;
             // 
             // btnAgregar
             // 
             btnAgregar.Location = new Point(17, 392);
             btnAgregar.Name = "btnAgregar";
             btnAgregar.Size = new Size(94, 29);
-            btnAgregar.TabIndex = 31;
+            btnAgregar.TabIndex = 6;
             btnAgregar.Text = "Agregar";
             btnAgregar.UseVisualStyleBackColor = true;
             btnAgregar.Click += btnAgregar_Click;
@@ -139,7 +139,7 @@
             btnModificar.Location = new Point(133, 392);
             btnModificar.Name = "btnModificar";
             btnModificar.Size = new Size(94, 29);
-            btnModificar.TabIndex = 29;
+            btnModificar.TabIndex = 7;
             btnModificar.Text = "Modificar";
             btnModificar.UseVisualStyleBackColor = true;
             btnModificar.Click += btnModificar_Click;

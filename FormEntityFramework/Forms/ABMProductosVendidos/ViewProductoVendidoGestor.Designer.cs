@@ -44,14 +44,14 @@
             txtIdProducto.Location = new Point(62, 178);
             txtIdProducto.Name = "txtIdProducto";
             txtIdProducto.Size = new Size(199, 27);
-            txtIdProducto.TabIndex = 47;
+            txtIdProducto.TabIndex = 2;
             // 
             // btnCancelar
             // 
             btnCancelar.Location = new Point(249, 389);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(94, 29);
-            btnCancelar.TabIndex = 46;
+            btnCancelar.TabIndex = 6;
             btnCancelar.Text = "Cancelar";
             btnCancelar.UseVisualStyleBackColor = true;
             btnCancelar.Click += btnCancelar_Click;
@@ -61,14 +61,14 @@
             txtStock.Location = new Point(62, 116);
             txtStock.Name = "txtStock";
             txtStock.Size = new Size(199, 27);
-            txtStock.TabIndex = 45;
+            txtStock.TabIndex = 1;
             // 
             // btnAgregar
             // 
             btnAgregar.Location = new Point(17, 389);
             btnAgregar.Name = "btnAgregar";
             btnAgregar.Size = new Size(94, 29);
-            btnAgregar.TabIndex = 44;
+            btnAgregar.TabIndex = 4;
             btnAgregar.Text = "Agregar";
             btnAgregar.UseVisualStyleBackColor = true;
             btnAgregar.Click += btnAgregar_Click;
@@ -87,7 +87,7 @@
             btnModificar.Location = new Point(133, 389);
             btnModificar.Name = "btnModificar";
             btnModificar.Size = new Size(94, 29);
-            btnModificar.TabIndex = 42;
+            btnModificar.TabIndex = 5;
             btnModificar.Text = "Modificar";
             btnModificar.UseVisualStyleBackColor = true;
             btnModificar.Click += btnModificar_Click;
@@ -115,7 +115,7 @@
             txtIdVenta.Location = new Point(62, 243);
             txtIdVenta.Name = "txtIdVenta";
             txtIdVenta.Size = new Size(199, 27);
-            txtIdVenta.TabIndex = 50;
+            txtIdVenta.TabIndex = 3;
             // 
             // ViewProductoVendidoGestor
             // 

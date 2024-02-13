@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FormEntityFramework")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5daa605931b695f98442a36a8bf9957c34959e12")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ce4058ebd81432b45d76598b3b7212aa9b9ea262")]
 [assembly: System.Reflection.AssemblyProductAttribute("FormEntityFramework")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FormEntityFramework")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
