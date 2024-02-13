@@ -95,7 +95,15 @@
             btnList.UseVisualStyleBackColor = true;
             btnList.Click += btnList_Click;
             // 
-     
+            // dgvDatos
+            // 
+            dgvDatos.ColumnHeadersHeight = 29;
+            dgvDatos.Location = new Point(318, 24);
+            dgvDatos.Name = "dgvDatos";
+            dgvDatos.RowHeadersWidth = 51;
+            dgvDatos.Size = new Size(583, 414);
+            dgvDatos.TabIndex = 14;
+            dgvDatos.SelectionChanged += dgvDatos_SelectionChanged;
             // 
             // ViewABMProductos
             // 
