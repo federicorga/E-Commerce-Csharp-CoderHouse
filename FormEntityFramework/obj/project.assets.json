@@ -782,6 +782,20 @@
             "rid": "win"
           }
         }
+      },
+      "Entidades/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "6.0.26",
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.26"
+        },
+        "compile": {
+          "bin/placeholder/Entidades.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Entidades.dll": {}
+        }
       }
     }
   },
@@ -2003,10 +2017,16 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "Entidades/1.0.0": {
+      "type": "project",
+      "path": "../Entidades/Entidades.csproj",
+      "msbuildProject": "../Entidades/Entidades.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0-windows7.0": [
+      "Entidades >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 6.0.26",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.26",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.26"
@@ -2020,11 +2040,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\CRUSO IT PROGRAMACION\\CODERHOUSE\\C# BACK-END\\Proyecto C# CoderHouse para entrega\\ProyectoFinalCsharpFedericoGarea\\FormEntityFramework\\FormEntityFramework.csproj",
+      "projectUniqueName": "D:\\CRUSO IT PROGRAMACION\\CODERHOUSE\\ProyectoFinalCsharpFedericoGarea\\FormEntityFramework\\FormEntityFramework.csproj",
       "projectName": "FormEntityFramework",
-      "projectPath": "D:\\CRUSO IT PROGRAMACION\\CODERHOUSE\\C# BACK-END\\Proyecto C# CoderHouse para entrega\\ProyectoFinalCsharpFedericoGarea\\FormEntityFramework\\FormEntityFramework.csproj",
+      "projectPath": "D:\\CRUSO IT PROGRAMACION\\CODERHOUSE\\ProyectoFinalCsharpFedericoGarea\\FormEntityFramework\\FormEntityFramework.csproj",
       "packagesPath": "C:\\Users\\Altair\\.nuget\\packages\\",
-      "outputPath": "D:\\CRUSO IT PROGRAMACION\\CODERHOUSE\\C# BACK-END\\Proyecto C# CoderHouse para entrega\\ProyectoFinalCsharpFedericoGarea\\FormEntityFramework\\obj\\",
+      "outputPath": "D:\\CRUSO IT PROGRAMACION\\CODERHOUSE\\ProyectoFinalCsharpFedericoGarea\\FormEntityFramework\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -2046,7 +2066,11 @@
       "frameworks": {
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\CRUSO IT PROGRAMACION\\CODERHOUSE\\ProyectoFinalCsharpFedericoGarea\\Entidades\\Entidades.csproj": {
+              "projectPath": "D:\\CRUSO IT PROGRAMACION\\CODERHOUSE\\ProyectoFinalCsharpFedericoGarea\\Entidades\\Entidades.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

@@ -1,4 +1,7 @@
 using FormEntityFramework.Forms;
+using FormEntityFramework.Forms.ABMProductos;
+using FormEntityFramework.Forms.ABMProductosVendidos;
+using FormEntityFramework.Forms.ABMVentas;
 
 namespace FormEntityFramework
 {
@@ -9,11 +12,42 @@ namespace FormEntityFramework
             InitializeComponent();
         }
 
+        private void FormMenuPrincipal_Load(object sender, EventArgs e)
+        {
+                  
+        }
+
         private void btnAccesoUsuario_Click(object sender, EventArgs e)
         {
-            ViewUsuarioGestor viewUsuarioGestor = new ViewUsuarioGestor();
+            ViewABMUsuarios ViewABMUsuarios = new ViewABMUsuarios();
 
-            viewUsuarioGestor.ShowDialog();
+            ViewABMUsuarios.ShowDialog();
         }
+
+        private void btnAccesoProducto_Click(object sender, EventArgs e)
+        {
+
+            ViewABMProductos viewABMProductos = new ViewABMProductos();
+
+            viewABMProductos.ShowDialog();
+
+        }
+
+        private void btnAccesoProductoVendido_Click(object sender, EventArgs e)
+        {
+
+           ViewABMProductosVendidos viewABMProductosVendidos = new ViewABMProductosVendidos ();
+            viewABMProductosVendidos.ShowDialog();
+
+        }
+
+        private void btnAccesoVenta_Click(object sender, EventArgs e)
+        {
+            ViewABMVentas viewABMVentas = new ViewABMVentas();
+            viewABMVentas.ShowDialog();
+
+        }
+
+     
     }
 }

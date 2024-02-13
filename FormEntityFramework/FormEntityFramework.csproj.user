@@ -4,10 +4,28 @@
     <Compile Update="FormMenuPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Forms\ViewUsuarioEditor.cs">
+    <Compile Update="Forms\ABMProductosVendidos\ViewProductoVendidoGestor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Forms\ViewUsuarioGestor.cs">
+    <Compile Update="Forms\ABMProductosVendidos\ViewABMProductosVendidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\ABMProductos\ViewABMProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\ABMProductos\ViewProductoGestor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\ABMUsuarios\ViewUsuarioGestor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\ABMUsuarios\ViewABMUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\ABMVentas\ViewABMVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\ABMVentas\ViewVentaGestor.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
