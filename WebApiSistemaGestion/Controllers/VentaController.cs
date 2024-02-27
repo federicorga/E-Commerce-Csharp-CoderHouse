@@ -109,29 +109,30 @@ namespace WebApiSistemaGestion.Controllers
         }
 
 
-        //[HttpDelete("EliminarVenta")]
+        [HttpDelete("{idVenta}")]
 
-        //public IActionResult EliminarVenta([FromQuery]int id)
-        //{
-        //    try {
-        //        if (this.ventaService.EliminarVenta(id))
-        //        {
-        //            return Ok("La venta fue eliminada de forma correcta");
-        //        }
-        //        else
-        //        {
-        //            return BadRequest($"La venta con el id: {id} no pudo ser eliminado");
-        //        }
+        public IActionResult EliminarVenta(int idVenta)
+        {
+            try
+            {
+                if (this.ventaService.EliminarVenta(idVenta))
+                {
+                    return Ok("La venta fue eliminada de forma correcta");
+                }
+                else
+                {
+                    return BadRequest($"La venta con el id: {idVenta} no pudo ser eliminado");
+                }
 
-        //    }
-        //    catch (CustomHttpException ex)
-        //    {
-        //        return StatusCode(ex.HttpStatusCode, new { message = ex.Message });
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        throw new Exception(ex.Message);
-        //    }
-        //}
+            }
+            catch (CustomHttpException ex)
+            {
+                return StatusCode(ex.HttpStatusCode, new { message = ex.Message });
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
     } 
 }
