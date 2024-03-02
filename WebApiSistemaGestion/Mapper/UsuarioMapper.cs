@@ -28,6 +28,7 @@ namespace WebApiSistemaGestion.Mapper
 
             usuarioDTO.Id = usuario.Id;
             usuarioDTO.Nombre=usuario.Nombre;
+            usuarioDTO.Apellido=usuario.Apellido;
             usuarioDTO.NombreUsuario = usuario.NombreUsuario;
             usuarioDTO.Contraseña = usuario.Contraseña;
             usuarioDTO.Mail = usuario.Mail;

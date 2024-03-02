@@ -24,6 +24,18 @@ namespace WebApiSistemaGestion
             builder.Services.AddScoped<VentaService>();
 
 
+            builder.Services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(policy => {
+                    policy.AllowAnyMethod();
+                    policy.AllowAnyOrigin();
+                    policy.AllowAnyHeader();
+                    
+                    });
+
+            });
+
+
             builder.Services.AddDbContext<DataBaseContext>(option => //Agrega un contexto de tipo DataBaseContext. aui se realiza la conexion.
             { 
                 string server = ".";
@@ -40,11 +52,10 @@ namespace WebApiSistemaGestion
                 app.UseSwaggerUI();
             }
 
+
+            app.UseCors();
             app.UseHttpsRedirection();
-
             app.UseAuthorization();
-
-
             app.MapControllers();
 
             app.Run();

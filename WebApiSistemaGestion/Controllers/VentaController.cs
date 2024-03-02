@@ -22,7 +22,7 @@ namespace WebApiSistemaGestion.Controllers
         {
             try
             {
-              
+
                 var listaDeVentas = this.ventaService.ObtenerListaDeVentas();
                 return listaDeVentas;
 
@@ -34,18 +34,18 @@ namespace WebApiSistemaGestion.Controllers
         }
 
         [HttpGet("{idUsuario}")]
-        public IActionResult ObtenerVentaPorIdUsuario(int idUsuario)
+        public IActionResult ObtenerVentasPorIdUsuario(int idUsuario)
         {
             try
             {
-                var venta = this.ventaService.ObtenerVentaPorIdUsuario(idUsuario);
+                var venta = this.ventaService.ObtenerVentasPorIdUsuario(idUsuario);
 
-                if(venta is not null)
+                if (venta is not null)
                 {
                     return Ok(venta);
                 }
 
-                return NotFound(new { Message=$"no se pudo obtener Venta con id de usuario: {idUsuario}", Status="404" });
+                return NotFound(new { Message = $"no se pudo obtener Venta con id de usuario: {idUsuario}", Status = "404" });
 
             }
             catch (CustomHttpException ex)
@@ -83,9 +83,9 @@ namespace WebApiSistemaGestion.Controllers
 
         //}
 
-        [HttpPost]
+        [HttpPost("{idUsuario}")]
 
-        public IActionResult FinalizarVenta([FromQuery]int idUsuario, [FromBody]List<ProductoDTO> listaProductoDTO)
+        public IActionResult FinalizarVenta(int idUsuario, [FromBody]List<ProductoDTO> listaProductoDTO)
         {
             try
             {

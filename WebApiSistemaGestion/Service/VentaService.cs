@@ -47,31 +47,79 @@ namespace WebApiSistemaGestion.Service
         }
 
 
-        public VentaDTO? ObtenerVentaPorIdUsuario(int idUsuario)
+        public List<VentaDTO> ObtenerVentasPorIdUsuario(int idUsuario)
         {
+
             try
             {
-                Venta? ventaBuscada = this.context.Ventas.Where(v => v.IdUsuario == idUsuario).FirstOrDefault();
-                if (ventaBuscada is not null)
+                var listaDeVentasDeUsuario = this.context.Ventas.Where(v => v.IdUsuario == idUsuario).ToList();
+
+                if (listaDeVentasDeUsuario is not null)
                 {
-                    var ventaDTO = VentaMapper.MapearVentaAVentaDTO(ventaBuscada);
-                    return ventaDTO;
+                  
+                    List<VentaDTO> listaDeVentasDTO = new List<VentaDTO>();
 
+                    foreach (var venta in listaDeVentasDeUsuario)
+                    {
+
+
+                        var ventaDTO = VentaMapper.MapearVentaAVentaDTO(venta);
+                        listaDeVentasDTO.Add(ventaDTO);
+                          
+                        
+                    }
+                    if (listaDeVentasDTO is not null)
+                    {
+                        return listaDeVentasDTO;
+                    }
+                    else
+                    {
+                        throw new CustomHttpException("fallo del servidor  en la carga de la lista", 500);
+                    }
+                   
                 }
-
-                //return null;
-                throw new CustomHttpException($"Venta con id de usuario: {idUsuario} no encontrada",404);
+                else
+                {
+                    throw new CustomHttpException($"No se encontraron ventas asociadas a este Usuario id: {idUsuario}", 404);
+                }
 
             }
             catch (CustomHttpException ex)
             {
-                throw new CustomHttpException($"No se pudo obtener la venta . Detalle: {ex.Message}", ex.HttpStatusCode);
+                throw new CustomHttpException($"No se pudieron obtener las ventas. Detalle: {ex.Message}", ex.HttpStatusCode);
             }
             catch (Exception ex)
             {
                 throw new Exception(ex.Message);
             }
+
         }
+
+        //public VentaDTO? ObtenerVentaPorIdUsuario(int idUsuario)
+        //{
+        //    try
+        //    {
+        //        Venta? ventaBuscada = this.context.Ventas.Where(v => v.IdUsuario == idUsuario).FirstOrDefault();
+        //        if (ventaBuscada is not null)
+        //        {
+        //            var ventaDTO = VentaMapper.MapearVentaAVentaDTO(ventaBuscada);
+        //            return ventaDTO;
+
+        //        }
+
+        //        return null;
+        //        throw new CustomHttpException($"Venta con id de usuario: {idUsuario} no encontrada", 404);
+
+        //    }
+        //    catch (CustomHttpException ex)
+        //    {
+        //        throw new CustomHttpException($"No se pudo obtener la venta . Detalle: {ex.Message}", ex.HttpStatusCode);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        throw new Exception(ex.Message);
+        //    }
+        //}
 
         public  VentaDTO? ObtenerVentaPorID(int id)
         {

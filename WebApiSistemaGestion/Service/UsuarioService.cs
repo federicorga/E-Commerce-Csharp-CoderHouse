@@ -134,18 +134,26 @@ namespace WebApiSistemaGestion.Service
                
             try
             {
-                var usuario = UsuarioMapper.MapearUsuarioDTOAUsuario(usuarioDTO);
-                if (usuarioDTO is not null)
+                Usuario? usuarioBuscado = this.context.Usuarios.Where(u => u.NombreUsuario == usuarioDTO.NombreUsuario).FirstOrDefault();
+                if (usuarioBuscado is null)
                 {
-                    this.context.Usuarios.Add(usuario);
-                    this.context.SaveChanges(); 
-                    return true;
+                    var usuario = UsuarioMapper.MapearUsuarioDTOAUsuario(usuarioDTO);
+                    if (usuarioDTO is not null)
+                    {
+                        this.context.Usuarios.Add(usuario);
+                        this.context.SaveChanges();
+                        return true;
+                    }
+
+
+                    return false;
+
+                    throw new CustomHttpException($"Formato de Usuario invalido.", 400);
                 }
+                
 
-
+                throw new CustomHttpException($"Usuario con nombre de usuario :{usuarioBuscado.NombreUsuario} existente", 409);
                 return false;
-
-                throw new CustomHttpException($"Formato de Usuario invalido.", 400);
 
             }
             catch (CustomHttpException ex)
@@ -191,7 +199,7 @@ namespace WebApiSistemaGestion.Service
 
         }
 
-        public bool ActualizarUsuarioPorId(UsuarioDTO usuarioDTO,int id)
+        public bool ActualizarUsuarioPorId(UsuarioDTO usuarioDTO)
         {
             try
             {
@@ -199,7 +207,7 @@ namespace WebApiSistemaGestion.Service
                 if (usuarioDTO is not null)
                 {
                    
-                    Usuario? usuarioBuscado = this.context.Usuarios.Where(u => u.Id == id).FirstOrDefault();
+                    Usuario? usuarioBuscado = this.context.Usuarios.Where(u => u.Id == usuarioDTO.Id).FirstOrDefault();
 
                     
                     if (usuarioBuscado is not null)
@@ -218,7 +226,7 @@ namespace WebApiSistemaGestion.Service
                         return true;
                     }
                     //return false;
-                    throw new CustomHttpException($"Usuario con id:{id}, no existe", 404);
+                    throw new CustomHttpException($"Usuario con id:{usuarioDTO.Id}, no existe", 404);
                 }
                 //return false;
                 throw new CustomHttpException( $"No se paso un objeto usuario valido",400);

@@ -148,18 +148,18 @@ namespace WebApiSistemaGestion.Controllers
         }
 
         [HttpPut]
-        public IActionResult ActualizarUsuarioPorId([FromBody] UsuarioDTO usuarioDTO, [FromQuery] int idUsuario)
+        public IActionResult ActualizarUsuarioPorId([FromBody] UsuarioDTO usuarioDTO)
         {
             try
             {
 
-                if (this.usuarioService.ActualizarUsuarioPorId(usuarioDTO, idUsuario))
+                if (this.usuarioService.ActualizarUsuarioPorId(usuarioDTO))
                 {
-                    return this.Ok(new { message = $"Usuario con ID: {idUsuario} fue modificado", status = "200" });
+                    return this.Ok(new { message = $"Usuario con ID: {usuarioDTO.Id} fue modificado", status = "200" });
                 }
                 else
                 {
-                    return this.BadRequest(new { messge = $"El Usuario con ID: {idUsuario} no pudo ser modificado", status = "400" });
+                    return this.BadRequest(new { messge = $"El Usuario con ID: {usuarioDTO.Id} no pudo ser modificado", status = "400" });
                 }
             }
             catch (CustomHttpException ex)
