@@ -15,7 +15,7 @@ namespace WebApiSistemaGestion.Controllers
         [HttpGet] 
         public string ObtenerNombre() 
         {
-            return "Federico Garea";
+            return "Panel de control";
         }
 
        
